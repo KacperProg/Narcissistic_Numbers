@@ -4,13 +4,18 @@ import java.util.ArrayList;
 public class Main {
 
     public static boolean isNarcissistic(int number) {
-        int a = 213;
+        double a = 213;
         int i = 1;
-        List<Integer> aSplit = new ArrayList<>();
+        List<Double> aSplit = new ArrayList<>();
         while(i>0){
             aSplit.add(a%10);
-
+            if(a/10<1){
+                i = -1;
+            }
+            a /= 10;
+            a = Math.floor(a);
         }
+        System.out.println(aSplit);
         return false;
     }
 
